@@ -57,11 +57,11 @@ def get_data(data,target,cut_off=None):
 
 
 if __name__ == '__main__':
-      train_data = pd.read_excel(r'raw_data_result/nodule_train_finalv1.xlsx')
-      valid_data = pd.read_excel(r'raw_data_result/nodule_valid_finalv1.xlsx')
-      test_data = pd.read_excel(r'raw_data_result/nodule_test_finalv1.xlsx')
+      train_data = pd.read_excel(r'train_data.xlsx')
+      valid_data = pd.read_excel(r'valid_data.xlsx')
+      test_data = pd.read_excel(r'test_data.xlsx')
       
-      target = 'CT1_ori'
+      target = 'resnet'
 
       train_result, cut_off = get_data(train_data,target)
       valid_result, _ = get_data(valid_data,target,cut_off)
